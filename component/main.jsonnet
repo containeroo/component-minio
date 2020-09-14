@@ -16,4 +16,5 @@ local params = inv.parameters.minio;
       namespace: params.namespace,
     },
   },
+  namespace: kube.Namespace(params.namespace),
 }
