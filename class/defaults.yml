@@ -1,3 +1,10 @@
 parameters:
   minio:
     namespace: syn-minio
+    charts:
+      minio: 6.1.2
+    helmValues:
+      existingSecret: minio-credentials
+    minioCredentialsSecret:
+      accesskey: ?{vaultkv:${customer:name}/${cluster:name}/minio/accesskey}
+      secretkey: ?{vaultkv:${customer:name}/${cluster:name}/minio/secretkey}
