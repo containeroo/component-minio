@@ -1,5 +1,6 @@
 parameters:
   minio:
+    extraYAMLs: []
     namespace: syn-minio
     charts:
       minio: 6.1.2

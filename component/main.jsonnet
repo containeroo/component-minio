@@ -1,6 +1,6 @@
 // main template for minio
 local kap = import 'lib/kapitan.libjsonnet';
-local kube = import 'lib/kube.libjsonnet';
+local kube = import 'kube.libjsonnet';
 local inv = kap.inventory();
 // The hiera parameters for the component
 local params = inv.parameters.minio;
@@ -17,4 +17,5 @@ local params = inv.parameters.minio;
     },
   },
   namespace: kube.Namespace(params.namespace),
+  "extraYAMLs": std.manifestYamlStream(params.extraYAMLs),
 }
