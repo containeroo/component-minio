@@ -17,5 +17,5 @@ local params = inv.parameters.minio;
     },
   },
   namespace: kube.Namespace(params.namespace),
-  "extraYAMLs": std.manifestYamlStream(params.extraYAMLs),
+  "extraYAMLs": std.manifestYamlDoc(params.extraYAMLs),
 }
