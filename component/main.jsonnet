@@ -7,7 +7,7 @@ local params = inv.parameters.minio;
 
 // Define outputs below
 {
-  "minio-credentials": kube.Secret(params.helmValues.existingSecret) {
+  'minio-credentials': kube.Secret(params.helmValues.existingSecret) {
     stringData: {
       accesskey: params.minioCredentialsSecret.accesskey,
       secretkey: params.minioCredentialsSecret.secretkey,
