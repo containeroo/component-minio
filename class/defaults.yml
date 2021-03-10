@@ -3,7 +3,7 @@ parameters:
     extraYAMLs: []
     namespace: syn-minio
     charts:
-      minio: 6.1.2
+      minio: 8.0.10
     helmValues:
       existingSecret: minio-credentials
     minioCredentialsSecret:
